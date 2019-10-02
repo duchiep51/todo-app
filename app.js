@@ -5,6 +5,9 @@ var bodyParser = require('body-parser');
 // then we call express
 var app = express();
 
+// init port number
+const port = process.env.PORT || 3000;
+
 // set up template engine 
 app.set('view engine', 'ejs');
 
@@ -56,7 +59,7 @@ app.get('/', (req, res) => {
 });
 
 
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log('Example app listening on port 3000!');
 });
 
